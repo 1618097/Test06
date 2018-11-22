@@ -19,6 +19,7 @@ public class MySQL {
     Map<String, Object> lng = new HashMap<>();
     private String id;
     
+    
 	public MySQL() {
 		this.driver = "org.gjt.mm.mysql.Driver";
 		this.server = "sangi2018.sist.ac.jp";

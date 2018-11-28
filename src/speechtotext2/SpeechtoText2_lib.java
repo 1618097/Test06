@@ -1,4 +1,5 @@
 package speechtotext2;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -42,9 +43,9 @@ public class SpeechtoText2_lib {
         	for(int i=0; i < node.get("results").size(); i++) {
         		String text = node.get("results").get(i).get("alternatives").get(0).get("transcript").toString();
         		System.out.println(text);
-        		double text2 = node.get("results").get(i).get("alternatives").get(0).get("confidence").asDouble();
-        		System.out.println(text2);
-        		mysql.updateImage(text, text2);
+        		double confidence = node.get("results").get(i).get("alternatives").get(0).get("confidence").asDouble();
+        		System.out.println(confidence);
+        		mysql.updateImage(text, confidence);
         	}
 		
 		

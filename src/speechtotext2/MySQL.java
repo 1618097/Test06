@@ -57,7 +57,8 @@ public class MySQL {
 	public void updateImage(String transcript, double confidence) {
 
 		StringBuffer buf = new StringBuffer();
-		buf.append("INSERT INTO  `speeches` (`user_id`, `transcript` ,`confidence`) VALUES ( '"+ 1618097 + "','" + transcript +"','" + confidence +"');");
+		buf.append("INSERT INTO  `speeches` (`user_id`, `transcript` ,`confidence`) VALUES ( '1618097','ƒeƒXƒg',  '0.5');");
+
 		String sql = buf.toString();
 		try {
 			stmt.execute (sql);

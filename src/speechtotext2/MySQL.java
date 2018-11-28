@@ -19,15 +19,15 @@ public class MySQL {
     Map<String, Object> lng = new HashMap<>();
     private String id;
     
-    
 	public MySQL() {
 		this.driver = "org.gjt.mm.mysql.Driver";
 		this.server = "sangi2018.sist.ac.jp";
-        this.dbname = "sangi2018";
+		this.dbname = "sangi2018";
+		this.url = "jdbc:mysql://" + server + "/" + dbname + "?useUnicode=true&characterEncoding=UTF-8";
         this.user = "sangi2018";
         this.password = "sistsangi2018";
         this.id = "1618097";
-        this.url = "jdbc:mysql://" + server + "/" + dbname + "?useUnicode=true&characterEncoding=UTF-8";
+
         try {
             this.con = DriverManager.getConnection(url, user, password);
             this.stmt = con.createStatement ();
@@ -54,11 +54,11 @@ public class MySQL {
 		return rs;
 	}
 	
+
+	
 	public void updateImage(String transcript, double confidence) {
-
 		StringBuffer buf = new StringBuffer();
-		buf.append("INSERT INTO  `speeches` (`user_id`, `transcript` ,`confidence`) VALUES ( '1618097','ƒeƒXƒg',  '0.5');");
-
+		buf.append("INSERT INTO  `speeches` (`user_id`, `transcript` ,`confidence`) VALUES ("+ id+ ","+ transcript +","+ confidence+");");
 		String sql = buf.toString();
 		try {
 			stmt.execute (sql);

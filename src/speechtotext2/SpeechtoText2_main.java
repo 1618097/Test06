@@ -12,16 +12,14 @@ import com.ibm.watson.developer_cloud.speech_to_text.v1.model.SpeechRecognitionR
 
 public class SpeechtoText2_main {
 
-	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
-		    SpeechtoText2_lib slib = new SpeechtoText2_lib(new File("audio/2.wav"));
-    		SpeechRecognitionResults transcript = slib.getTranscript();
-
-		    System.out.println(transcript);
-
-		    slib.getJson(transcript);
+		
+		SpeechtoText2_lib slib = new SpeechtoText2_lib(new File("audio/2.wav"));
+        SpeechRecognitionResults transcript = slib.getTranscript();
+        System.out.println(transcript);
+        
+        slib.getJson(transcript);
 
 	}
 

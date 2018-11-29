@@ -26,7 +26,7 @@ public class MySQL {
 		this.url = "jdbc:mysql://" + server + "/" + dbname + "?useUnicode=true&characterEncoding=UTF-8";
         this.user = "1618097";
         this.password = "sist1618097";
-        this.id = "1618097";
+        //this.id = "1618097";
 
         try {
             this.con = DriverManager.getConnection(url, user, password);

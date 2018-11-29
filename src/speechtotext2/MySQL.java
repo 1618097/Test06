@@ -22,10 +22,10 @@ public class MySQL {
 	public MySQL() {
 		this.driver = "org.gjt.mm.mysql.Driver";
 		this.server = "sangi2018.sist.ac.jp";
-		this.dbname = "1618097";
+		this.dbname = "sangi2018";
 		this.url = "jdbc:mysql://" + server + "/" + dbname + "?useUnicode=true&characterEncoding=UTF-8";
-        this.user = "1618097";
-        this.password = "master8829";
+        this.user = "sangi2018";
+        this.password = "sistsangi2018";
         this.id = "1618097";
 
         try {
